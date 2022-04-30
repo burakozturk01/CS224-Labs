@@ -1,0 +1,24 @@
+module mips_bench;
+  
+  logic clk, reset, memwrite, alusrca, alusrcb, regwrite, jump, branch, pcsrc, zero;
+  
+  logic [1:0] memtoreg, aluop, regdst;
+  
+  logic [31:0] pc, instr, readdata, writedata, dataadr;
+  
+  new_top td (clk, reset, memwrite, alusrca, alusrcb, regwrite, jump, branch, memtoreg, aluop, regdst, pc, instr, readdata, writedata, dataadr, pcsrc, zero);
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars(1, td);
+  end
+  
+	initial begin
+      reset = 1;
+      
+      for(int i = 0; i < 100; i++) begin
+        #10; clk = ~clk;
+        reset = 0;
+		end
+    end
+endmodule

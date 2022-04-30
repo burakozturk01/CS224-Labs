@@ -1,0 +1,18 @@
+SummaryOfChanges
+----------------
+"Complete MIPS model Ver2.txt"
+* Removed aluout signal from controller
+* Converted 'logic [10:0] controls' to 'logic [9:0] controls', it did not create a problem before but still replacing with the correct one
+
+"Lab4Spring21Ver2.doc"
+* Figure 1 changed (for RegDst and MemToReg signals, Replaced [2:0] with
+[1:0])
+* Part 1.f.v dataaddress renamed as dataadr
+
+"JR Changes Ver2.docx"
+* Changed Figure 1 (for Jump, RegDst and MemToReg signals, Replaced [2:0] with [1:0])
+* Added Clarification
+
+"Final Datapath Ver2.png"
+* For Jump, RegDst and MemToReg signals, Replaced [2:0] with [1:0]
+
